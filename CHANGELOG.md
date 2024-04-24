@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.0.1...v1.0.2) (2024-04-24)
+
+### Bug Fixes
+
+- upgrade xml-disassembler, normalize `jsonPath`/`yamlPath` variables to `filePath` ([8d26a6b](https://github.com/mcarvin8/xml2yaml-disassembler/commit/8d26a6b412b8731544ff91995bc9281885ca65a4))
+
 ## [1.0.1](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.0.0...v1.0.1) (2024-04-24)
 
 ### Bug Fixes
