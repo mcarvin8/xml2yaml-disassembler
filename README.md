@@ -29,7 +29,7 @@ npm install xml2yaml-disassembler
 ```typescript
 /* 
 FLAGS
-- xmlPath: Path to 1 XML file or a directory of XML files to disassemble, then transform into YAML files. If the path provided is a directory, only the files in the immediate directory will be disassembled and transformed.
+- filePath: Path to 1 XML file or a directory of XML files to disassemble, then transform into YAML files. If the path provided is a directory, only the files in the immediate directory will be disassembled and transformed.
 - uniqueIdElements: (Optional) Comma-separated list of unique and required ID elements used to name disassembled files for nested elements. 
                                Defaults to SHA-256 hash if unique ID elements are undefined or not found.
 - prePurge:  (Optional) Boolean value. If set to true, purge pre-existing transformed directories prior to disassembling and transformed the file.
@@ -41,7 +41,7 @@ import { XmlToYamlDisassembler } from "xml2yaml-disassembler";
 
 const handler = new XmlToYamlDisassembler();
 await handler.disassemble({
-  xmlPath: "test/baselines/general",
+  filePath: "test/baselines/general",
   uniqueIdElements:
     "application,apexClass,name,externalDataSource,flow,object,apexPage,recordType,tab,field",
   prePurge: true,
@@ -49,7 +49,7 @@ await handler.disassemble({
 });
 ```
 
-Disassemble then transform 1 or multiple XML files into YAML files. If the `xmlPath` is a directory, only the XMLs in the immediate directory will be processed. Each XML wiill be transformed into YAML files in new sub-directories using the XML's base name (everything before the first period in the file-name).
+Disassemble then transform 1 or multiple XML files into YAML files. If the `filePath` is a directory, only the XMLs in the immediate directory will be processed. Each XML wiill be transformed into YAML files in new sub-directories using the XML's base name (everything before the first period in the file-name).
 
 Example:
 
@@ -120,7 +120,7 @@ will be disassembled into a sub-directory named `HR_Admin` as such:
 ```typescript
 /* 
 FLAGS
-- yamlPath: Path to the directory containing the YAML files to reassemble into 1 XML file (must be a directory).
+- filePath: Path to the directory containing the YAML files to reassemble into 1 XML file (must be a directory).
 - fileExtension: (Optional) Desired file extension for the final XML (default: `.xml`).
 - postPurge: (Optional) Boolean value. If set to true, purge the disassembled directory containing YAML files after the XML is reassembled.
                                Defaults to false.
@@ -129,13 +129,13 @@ import { YamlToXmlReassembler } from "xml2yaml-disassembler";
 
 const handler = new YamlToXmlReassembler();
 await handler.reassemble({
-  yamlPath: "test/baselines/HR_Admin",
+  filePath: "test/baselines/HR_Admin",
   fileExtension: "permissionset-meta.xml",
   postPurge: true,
 });
 ```
 
-Reassemble all of the YAML files in a directory into 1 XML file. **Note:** You should only be reassembling YAML files created by the `XmlToYamlDisassembler` class for intended results. The reassembled XML file will be created in the parent directory of `yamlPath` and will overwrite the original file used to create the original disassembled directories, if it still exists and the `fileExtension` flag matches the original file extension.
+Reassemble all of the YAML files in a directory into 1 XML file. **Note:** You should only be reassembling YAML files created by the `XmlToYamlDisassembler` class for intended results. The reassembled XML file will be created in the parent directory of `filePath` and will overwrite the original file used to create the original disassembled directories, if it still exists and the `fileExtension` flag matches the original file extension.
 
 ## Logging
 
@@ -189,7 +189,7 @@ setLogLevel("debug");
 
 const disassembleHandler = new XmlToYamlDisassembler();
 await disassembleHandler.disassemble({
-  xmlPath: "test/baselines/general",
+  filePath: "test/baselines/general",
   uniqueIdElements:
     "application,apexClass,name,externalDataSource,flow,object,apexPage,recordType,tab,field",
   prePurge: true,
@@ -198,7 +198,7 @@ await disassembleHandler.disassemble({
 
 const reassembleHandler = new YamlToXmlReassembler();
 await reassembleHandler.reassemble({
-  yamlPath: "test/baselines/HR_Admin",
+  filePath: "test/baselines/HR_Admin",
   fileExtension: "permissionset-meta.xml",
   postPurge: true,
 });
