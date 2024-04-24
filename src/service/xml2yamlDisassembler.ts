@@ -8,7 +8,7 @@ import { disassembleHandler } from "@src/service/disassembleHandler";
 import { transform2YAML } from "@src/service/transform2YAML";
 
 export class XmlToYamlDisassembler {
-  async transform(xmlAttributes: {
+  async disassemble(xmlAttributes: {
     xmlPath: string;
     uniqueIdElements?: string;
     prePurge?: boolean;

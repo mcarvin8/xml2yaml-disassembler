@@ -36,7 +36,7 @@ describe("main function", () => {
   });
 
   it("should disassemble & transform 1 XML file into YAML files.", async () => {
-    await xml2yamlDisassemblerHandler.transform({
+    await xml2yamlDisassemblerHandler.disassemble({
       xmlPath: "mock/HR_Admin.permissionset-meta.xml",
       uniqueIdElements:
         "application,apexClass,name,externalDataSource,flow,object,apexPage,recordType,tab,field",
@@ -45,7 +45,7 @@ describe("main function", () => {
     expect(logger.error).not.toHaveBeenCalled();
   });
   it("should disassemble & transform a directory of XML files into YAML files.", async () => {
-    await xml2yamlDisassemblerHandler.transform({
+    await xml2yamlDisassemblerHandler.disassemble({
       xmlPath: "mock",
       uniqueIdElements:
         "application,apexClass,name,externalDataSource,flow,object,apexPage,recordType,tab,field",
@@ -98,7 +98,7 @@ describe("main function", () => {
     fakeFile = resolve(fakeFile);
     const fakeFileContents = "Testing error condition.";
     await writeFile(fakeFile, fakeFileContents);
-    await xml2yamlDisassemblerHandler.transform({
+    await xml2yamlDisassemblerHandler.disassemble({
       xmlPath: fakeFile,
     });
     expect(logger.error).toHaveBeenCalled();

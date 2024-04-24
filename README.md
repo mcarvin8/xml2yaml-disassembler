@@ -40,7 +40,7 @@ FLAGS
 import { XmlToYamlDisassembler } from "xml2yaml-disassembler";
 
 const handler = new XmlToYamlDisassembler();
-await handler.transform({
+await handler.disassemble({
   xmlPath: "test/baselines/general",
   uniqueIdElements:
     "application,apexClass,name,externalDataSource,flow,object,apexPage,recordType,tab,field",
@@ -188,7 +188,7 @@ import {
 setLogLevel("debug");
 
 const disassembleHandler = new XmlToYamlDisassembler();
-await disassembleHandler.transform({
+await disassembleHandler.disassemble({
   xmlPath: "test/baselines/general",
   uniqueIdElements:
     "application,apexClass,name,externalDataSource,flow,object,apexPage,recordType,tab,field",
