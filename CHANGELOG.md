@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.1.0...v1.1.1) (2024-05-22)
+
+### Bug Fixes
+
+- pass ignore path to xml disassembler ([6b5a9b1](https://github.com/mcarvin8/xml2yaml-disassembler/commit/6b5a9b17f7ffb62c35a43364e35d5fc35e2f1dd0))
+
 # [1.1.0](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.0.2...v1.1.0) (2024-05-22)
 
 ### Features
