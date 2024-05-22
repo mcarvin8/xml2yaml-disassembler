@@ -1,3 +1,9 @@
+# [1.1.0](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.0.2...v1.1.0) (2024-05-22)
+
+### Features
+
+- allow an ignore file when running disassembly ([d9e3cf2](https://github.com/mcarvin8/xml2yaml-disassembler/commit/d9e3cf27f8fcf8b1b7163a77a53380a43a18e5ca))
+
 ## [1.0.2](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.0.1...v1.0.2) (2024-04-24)
 
 ### Bug Fixes
