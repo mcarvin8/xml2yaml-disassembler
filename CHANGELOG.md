@@ -5,6 +5,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.4](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.1.3...v1.1.4) (2025-01-02)
+
+
+### Bug Fixes
+
+* remove ignore dependency from this plugin ([c60d11f](https://github.com/mcarvin8/xml2yaml-disassembler/commit/c60d11f8d3161171c9c59fcde4ce48de29a111e4))
+
 ## [1.1.3](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.1.2...v1.1.3) (2024-12-15)
 
 
