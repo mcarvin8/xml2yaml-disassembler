@@ -5,6 +5,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.5](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.1.4...v1.1.5) (2025-01-04)
+
+
+### Bug Fixes
+
+* **deps:** bump fast-xml-parser from 4.3.4 to 4.5.1 ([37c492c](https://github.com/mcarvin8/xml2yaml-disassembler/commit/37c492ce7e2df5f27d52c535c28cca06a76c08fb))
+* **deps:** bump xml-disassembler from 1.3.4 to 1.3.5 ([7c70c01](https://github.com/mcarvin8/xml2yaml-disassembler/commit/7c70c0100fcb1918a5d6e4654045a3b8e56fdf08))
+
 ## [1.1.4](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.1.3...v1.1.4) (2025-01-02)
 
 
