@@ -5,6 +5,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.6](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.1.5...v1.1.6) (2025-01-04)
+
+
+### Bug Fixes
+
+* import log4js from xml-disassembler ([2104081](https://github.com/mcarvin8/xml2yaml-disassembler/commit/2104081ee374005410d0ade4c221e5107c5800f3))
+* remove fast-xml-parser from this package ([487b722](https://github.com/mcarvin8/xml2yaml-disassembler/commit/487b7223d6c9e0588840c91072285ae5d684e44c))
+
 ## [1.1.5](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.1.4...v1.1.5) (2025-01-04)
 
 
