@@ -1,12 +1,11 @@
 "use strict";
 
-import { readdir, readFile, rm, stat, writeFile } from "node:fs/promises";
+import { readdir, rm, stat, writeFile } from "node:fs/promises";
 import { join } from "node:path/posix";
-import { XMLParser } from "fast-xml-parser";
 import { stringify } from "yaml";
+import { parseXML } from "xml-disassembler";
 
 import { logger } from "@src/index";
-import { XML_PARSER_OPTION, XmlElement } from "@src/helpers/types";
 
 export async function transform2YAML(xmlPath: string): Promise<void> {
   const subFiles = await readdir(xmlPath);
@@ -25,13 +24,8 @@ export async function transform2YAML(xmlPath: string): Promise<void> {
 }
 
 async function writeYAML(xmlPath: string): Promise<void> {
-  const xmlParser = new XMLParser(XML_PARSER_OPTION);
-  const xmlContent = await readFile(xmlPath, "utf-8");
-  const xmlParsed = xmlParser.parse(xmlContent, true) as Record<
-    string,
-    XmlElement
-  >;
-  const yamlString = stringify(xmlParsed);
+  const parsedXml = await parseXML(xmlPath);
+  const yamlString = stringify(parsedXml);
   const yamlPath = xmlPath.replace(/\.xml$/, ".yaml");
   await writeFile(yamlPath, yamlString);
   logger.debug(`${xmlPath} has been transformed into ${yamlPath}`);
