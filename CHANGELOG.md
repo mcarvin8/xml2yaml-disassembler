@@ -5,6 +5,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.8](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.1.7...v1.1.8) (2025-01-17)
+
+
+### Bug Fixes
+
+* upgrade xml-disassembler ([9089b5d](https://github.com/mcarvin8/xml2yaml-disassembler/commit/9089b5dd7dc5538558e780631b6c19774eedcc70))
+* upgrade yaml ([c3909dd](https://github.com/mcarvin8/xml2yaml-disassembler/commit/c3909dd18580bfd50c8d2653e698c3ea3fa1d5a6))
+
 ## [1.1.7](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.1.6...v1.1.7) (2025-01-10)
 
 
