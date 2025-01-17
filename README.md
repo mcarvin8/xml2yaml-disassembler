@@ -4,6 +4,20 @@
 
 A JavaScript package to disassemble then transform XML files into smaller YAML files. This is an extension of my [XML Disassembler](https://github.com/mcarvin8/xml-disassembler) package.
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+
+- [Background](#background)
+- [Install](#install)
+- [Usage](#usage)
+  - [XML2YAML](#xml2yaml)
+  - [YAML2XML](#yaml2xml)
+- [Ignore File](#ignore-file)
+- [Logging](#logging)
+- [Template](#template)
+</details>
+
 ## Background
 
 Large XML files can be a pain to mantain in version control. These files can contain thousands of lines and it becomes very difficult to track changes made to these files in a standard version control server like GitHub.
@@ -26,7 +40,7 @@ npm install xml2yaml-disassembler
 
 ## Usage
 
-### XML 2 YAML
+### XML2YAML
 
 ```typescript
 /* 
@@ -119,7 +133,7 @@ will be disassembled into a sub-directory named `HR_Admin` as such:
 
 <br>
 
-### YAML 2 XML
+### YAML2XML
 
 ```typescript
 /* 
