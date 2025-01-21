@@ -3,10 +3,6 @@
 import { existsSync } from "node:fs";
 import { stat, readdir } from "node:fs/promises";
 import { resolve, join, basename, dirname, extname } from "node:path/posix";
-import {
-  withConcurrencyLimit,
-  getConcurrencyThreshold,
-} from "xml-disassembler";
 
 import { logger } from "@src/index";
 import { disassembleHandler } from "@src/service/disassembleHandler";
@@ -27,8 +23,6 @@ export class XmlToYamlDisassembler {
       postPurge = false,
       ignorePath = ".xmldisassemblerignore",
     } = xmlAttributes;
-    const concurrencyLimit = getConcurrencyThreshold();
-    const tasks = [];
     const fileStat = await stat(filePath);
 
     if (fileStat.isFile()) {
@@ -37,34 +31,28 @@ export class XmlToYamlDisassembler {
         logger.error(`The file path is not an XML file: ${resolvedPath}`);
         return;
       }
-      tasks.push(() =>
-        this.processFile({
-          filePath: resolvedPath,
-          uniqueIdElements,
-          prePurge,
-          postPurge,
-          ignorePath,
-        }),
-      );
+      await this.processFile({
+        filePath: resolvedPath,
+        uniqueIdElements,
+        prePurge,
+        postPurge,
+        ignorePath,
+      });
     } else if (fileStat.isDirectory()) {
       const subFiles = await readdir(filePath);
       for (const subFile of subFiles) {
         const subFilePath = join(filePath, subFile);
         if (subFilePath.endsWith(".xml")) {
-          tasks.push(() =>
-            this.processFile({
-              filePath: subFilePath,
-              uniqueIdElements,
-              prePurge,
-              postPurge,
-              ignorePath,
-            }),
-          );
+          await this.processFile({
+            filePath: subFilePath,
+            uniqueIdElements,
+            prePurge,
+            postPurge,
+            ignorePath,
+          });
         }
       }
     }
-
-    await withConcurrencyLimit(tasks, concurrencyLimit);
   }
 
   async processFile(xmlAttributes: {
