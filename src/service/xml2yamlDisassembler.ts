@@ -3,12 +3,14 @@
 import { existsSync } from "node:fs";
 import { stat, readdir } from "node:fs/promises";
 import { resolve, join, basename, dirname, extname } from "node:path/posix";
+import {
+  withConcurrencyLimit,
+  getConcurrencyThreshold,
+} from "xml-disassembler";
 
 import { logger } from "@src/index";
 import { disassembleHandler } from "@src/service/disassembleHandler";
 import { transform2YAML } from "@src/service/transform2YAML";
-import { withConcurrencyLimit } from "./withConcurrencyLimit";
-import { getConcurrencyThreshold } from "./getConcurrencyThreshold";
 
 export class XmlToYamlDisassembler {
   async disassemble(xmlAttributes: {
