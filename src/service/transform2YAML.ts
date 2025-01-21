@@ -3,11 +3,13 @@
 import { readdir, rm, writeFile } from "node:fs/promises";
 import { join } from "node:path/posix";
 import { stringify } from "yaml";
-import { parseXML } from "xml-disassembler";
+import {
+  parseXML,
+  withConcurrencyLimit,
+  getConcurrencyThreshold,
+} from "xml-disassembler";
 
 import { logger } from "@src/index";
-import { withConcurrencyLimit } from "./withConcurrencyLimit";
-import { getConcurrencyThreshold } from "./getConcurrencyThreshold";
 
 export async function transform2YAML(xmlPath: string): Promise<void> {
   const tasks: (() => Promise<void>)[] = [];
