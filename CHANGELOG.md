@@ -5,6 +5,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.11](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.1.10...v1.1.11) (2025-01-21)
+
+
+### Bug Fixes
+
+* remove parallel processing due to issues ([6dd4ad5](https://github.com/mcarvin8/xml2yaml-disassembler/commit/6dd4ad5d40663c453330324db73ae95e5993d52f))
+
 ## [1.1.10](https://github.com/mcarvin8/xml2yaml-disassembler/compare/v1.1.9...v1.1.10) (2025-01-21)
 
 
