@@ -15,6 +15,7 @@ A JavaScript package to disassemble then transform XML files into smaller YAML f
   - [YAML2XML](#yaml2xml)
 - [Ignore File](#ignore-file)
 - [Logging](#logging)
+- [Contributing](#contributing)
 - [Template](#template)
 </details>
 
@@ -227,6 +228,10 @@ await reassembleHandler.reassemble({
   postPurge: true,
 });
 ```
+
+## Contributing
+
+Contributions are welcome! See [Contributing](https://github.com/mcarvin8/xml2yaml-disassembler/blob/main/CONTRIBUTING.md).
 
 ## Template
 
