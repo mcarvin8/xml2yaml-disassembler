@@ -2,8 +2,6 @@
 
 [![NPM](https://img.shields.io/npm/v/xml2yaml-disassembler.svg?label=xml2yaml-disassembler)](https://www.npmjs.com/package/xml2yaml-disassembler) [![Downloads/week](https://img.shields.io/npm/dw/xml2yaml-disassembler.svg)](https://npmjs.org/package/xml2yaml-disassembler)
 
-Disassemble XML files into smaller, more manageable YAML files and reassemble the XML when needed. This is an extension of [`xml-disassembler`](https://github.com/mcarvin8/xml-disassembler).
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -22,9 +20,9 @@ Disassemble XML files into smaller, more manageable YAML files and reassemble th
 
 ## Background
 
-Large XML files can be a pain to mantain in version control. These files can contain thousands of lines and it becomes very difficult to track changes made to these files in a standard version control server like GitHub.
+Converts large XML files into smaller, human-readable, indentation-based YAML files, ideal for configuration management and easy manual edits. Supports reassembly into XML for round-trip transformations.
 
-This package offers a way to break down large XML files into smaller YAML files which can be used to review changes in a format easier to digest. When needed, the inverse class will reassemble the original XML file from the smaller YAML files.
+This is an extension of [`xml-disassembler`](https://github.com/mcarvin8/xml-disassembler).
 
 ## Install
 
