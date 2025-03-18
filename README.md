@@ -38,7 +38,7 @@ npm install xml2yaml-disassembler
 
 ### XML2YAML
 
-Disassemble then transform 1 or multiple XML files in the root of a directory into YAML files. Paths provided must be **relative** paths.
+Disassemble then transform 1 or multiple XML files into YAML files.
 
 ```typescript
 /* 
@@ -66,9 +66,7 @@ await handler.disassemble({
 
 ### YAML2XML
 
-Reassemble all of the YAML files in a directory into 1 XML file. Path provided must be **relative** path. 
-
-> **Note:** You should only be reassembling YAML files created by the `XmlToYamlDisassembler` class for intended results. The reassembled XML file will be created in the parent directory of `filePath` and will overwrite the original file used to create the original disassembled directories, if it still exists and the `fileExtension` flag matches the original file extension.
+Reassemble disassembled YAML directory into 1 XML file. 
 
 ```typescript
 /* 
