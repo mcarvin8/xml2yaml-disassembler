@@ -43,14 +43,13 @@ Disassemble then transform 1 or multiple XML files in the root of a directory in
 ```typescript
 /* 
 FLAGS
-- filePath: Relative path to 1 XML file or a directory of XML files to disassemble, then transform into YAML files. If the path provided is a directory, only the files in the immediate directory will be disassembled and transformed.
-- uniqueIdElements: (Optional) Comma-separated list of unique and required ID elements used to name disassembled files for nested elements. 
-                               Defaults to SHA-256 hash if unique ID elements are undefined or not found.
-- prePurge:  (Optional) Boolean value. If set to true, purge pre-existing transformed directories prior to disassembling and transformed the file.
-                               Defaults to false.
-- postPurge: (Optional) Boolean value. If set to true, purge the original XML file after transforming it into smaller YAML files.
-                               Defaults to false.
-- ignorePath: (Optional) Path to an ignore file containing XML files to ignore during disassembly. See "Ignore File" section.
+- filePath:         Relative path to 1 XML file or a directory of XML files to disassemble into YAML files.
+- uniqueIdElements: Comma-separated list of unique and required ID elements used to name disassembled files for nested elements. 
+                    Defaults to SHA-256 hash if unique ID elements are undefined or not found.
+- prePurge:         Delete pre-existing disassembled directories prior to disassembling the file.
+- postPurge:        Delete the original XML file after disassembling it.
+
+- ignorePath:       Path to an disassembly ignore file.
 */
 import { XmlToYamlDisassembler } from "xml2yaml-disassembler";
 
