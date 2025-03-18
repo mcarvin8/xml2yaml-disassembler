@@ -2,7 +2,7 @@
 
 [![NPM](https://img.shields.io/npm/v/xml2yaml-disassembler.svg?label=xml2yaml-disassembler)](https://www.npmjs.com/package/xml2yaml-disassembler) [![Downloads/week](https://img.shields.io/npm/dw/xml2yaml-disassembler.svg)](https://npmjs.org/package/xml2yaml-disassembler)
 
-Disassemble XML files into smaller, more manageable YAML files and reassemble the XML when needed. This is an extension of the [XML Disassembler](https://github.com/mcarvin8/xml-disassembler) package.
+Disassemble XML files into smaller, more manageable YAML files and reassemble the XML when needed. This is an extension of [`xml-disassembler`](https://github.com/mcarvin8/xml-disassembler).
 
 <!-- TABLE OF CONTENTS -->
 <details>
