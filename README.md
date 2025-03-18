@@ -73,10 +73,10 @@ Reassemble all of the YAML files in a directory into 1 XML file. Path provided m
 ```typescript
 /* 
 FLAGS
-- filePath: Relative path to the directory containing the YAML files to reassemble into 1 XML file (must be a directory).
-- fileExtension: (Optional) Desired file extension for the final XML (default: `.xml`).
-- postPurge: (Optional) Boolean value. If set to true, purge the disassembled directory containing YAML files after the XML is reassembled.
-                               Defaults to false.
+- filePath:        Relative path to the disassembled YAML directory to reassemble as an XML file.
+- fileExtension:   File extension for the reassembled XML.
+                   (default: `.xml`)
+- postPurge:       Delete the disassembled directory after reassembly.
 */
 import { YamlToXmlReassembler } from "xml2yaml-disassembler";
 
