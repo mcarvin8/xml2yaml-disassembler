@@ -1,6 +1,6 @@
 {
   "name": "xml2yaml-disassembler",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "description": "Disassemble XML files into smaller, more manageable YAML files and reassemble the XML when needed.",
   "author": "Matt Carvin",
   "license": "ISC",
